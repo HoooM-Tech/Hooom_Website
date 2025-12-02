@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -26,8 +27,12 @@ export function CallToAction({
       <div className="mesh-bg" aria-hidden />
       <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-sm uppercase tracking-[0.2em] text-brand-orange font-semibold">Let's build</p>
-          <h3 className="text-2xl md:text-3xl font-semibold text-slate-900">{title}</h3>
+          <p className="text-sm uppercase tracking-[0.2em] text-brand-orange font-semibold">
+            Let's build
+          </p>
+          <h3 className="text-2xl md:text-3xl font-semibold text-slate-900">
+            {title}
+          </h3>
           <p className="mt-2 text-slate-600 max-w-2xl">{description}</p>
         </div>
         <div className="flex gap-3 flex-wrap">

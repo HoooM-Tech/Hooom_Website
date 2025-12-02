@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Service } from "../data/services";
@@ -16,7 +17,9 @@ export function ServiceCard({ service, compact }: Props) {
     >
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-slate-900">{service.name}</h3>
-        <span className="text-xs uppercase tracking-[0.2em] text-brand-orange">{service.slug}</span>
+        <span className="text-xs uppercase tracking-[0.2em] text-brand-orange">
+          {service.slug}
+        </span>
       </div>
       <p className="mt-3 text-slate-600 flex-1">{service.shortDescription}</p>
       {!compact && (

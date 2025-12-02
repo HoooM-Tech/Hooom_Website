@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -29,7 +30,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-slate-700 max-w-2xl"
           >
-            We design and engineer digital products, brands, and enterprise systems that help teams scale with confidence.
+            We design and engineer digital products, brands, and enterprise
+            systems that help teams scale with confidence.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -66,12 +68,15 @@ export function Hero() {
             ].map((stat) => (
               <div key={stat.label} className="rounded-2xl bg-slate-50 p-4">
                 <p className="text-sm text-slate-600">{stat.label}</p>
-                <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
+                <p className="text-2xl font-semibold text-slate-900">
+                  {stat.value}
+                </p>
               </div>
             ))}
           </div>
           <p className="mt-6 text-sm text-slate-600">
-            Engineered for ambitious teams: software development, UX/UI design, branding, enterprise systems, and cloud operations.
+            Engineered for ambitious teams: software development, UX/UI design,
+            branding, enterprise systems, and cloud operations.
           </p>
         </motion.div>
       </div>
