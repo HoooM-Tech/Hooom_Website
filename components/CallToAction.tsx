@@ -28,7 +28,7 @@ export function CallToAction({
       <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-sm uppercase tracking-[0.2em] text-brand-orange font-semibold">
-            Let's build
+            Lets build
           </p>
           <h3 className="text-2xl md:text-3xl font-semibold text-slate-900">
             {title}

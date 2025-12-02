@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
       <h1 className="text-4xl font-semibold text-slate-900">Page not found</h1>
       <p className="mt-2 text-slate-600 max-w-xl">
-        The page you are looking for might have been moved. Lets get you back to
+        The page you are looking for might have been moved. Les get you back to
         building with HoooM.
       </p>
       <div className="mt-6 flex gap-3">
