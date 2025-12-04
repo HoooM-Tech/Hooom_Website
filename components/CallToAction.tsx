@@ -38,7 +38,7 @@ export function CallToAction({
         <div className="flex gap-3 flex-wrap">
           <Link
             href={primaryHref}
-            className="rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
+            className="rounded-full bg-cyan-400 text-gray-900 px-5 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
           >
             {primaryLabel}
           </Link>

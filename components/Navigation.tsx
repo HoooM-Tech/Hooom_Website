@@ -76,7 +76,7 @@ export function Navigation() {
         </nav>
         <Link
           href="/contact"
-          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gray-600 text-white px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
+          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-cyan-400 text-gray-900 px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
         >
           Book a Strategy Call
         </Link>

@@ -16,16 +16,16 @@ export function ServiceCard({ service, compact }: Props) {
       className="card-surface p-6 soft-shadow h-full flex flex-col"
     >
       <div className="flex items-center justify-between gap-8">
-        <h3 className="md:text-lg text-sm max-w-40 font-semibold p-1.5 rounded-md bg-gray-700  text-gray-100">
+        <h3 className="md:text-lg text-sm max-w-40 font-semibold p-1.5 rounded-md bg-gray-800  text-gray-100">
           {service.name}
         </h3>
         <span className="text-xs uppercase tracking-[0.2em] font-bold text-brand-orange">
           {service.slug}
         </span>
       </div>
-      <p className="mt-3 text-slate-600 flex-1">{service.shortDescription}</p>
+      <p className="mt-3 text-slate-800 flex-1">{service.shortDescription}</p>
       {!compact && (
-        <ul className="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+        <ul className="mt-4 space-y-2 text-sm text-slate-800 list-disc list-inside">
           {service.bullets.slice(0, 3).map((item) => (
             <li key={item}>{item}</li>
           ))}
