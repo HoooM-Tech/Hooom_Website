@@ -50,7 +50,10 @@ export function Navigation() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
           {navItems.map((item) => (
             <div key={item.href} className="relative group">
-              <Link href={item.href} className="hover:text-brand-orange transition-colors">
+              <Link
+                href={item.href}
+                className="hover:text-brand-orange transition-colors"
+              >
                 {item.label}
               </Link>
               {item.children && (
@@ -73,7 +76,7 @@ export function Navigation() {
         </nav>
         <Link
           href="/contact"
-          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
+          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gray-500 text-white px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
         >
           Book a Strategy Call
         </Link>

@@ -20,7 +20,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-500 leading-tight"
           >
             Build Better. Build Faster. Build With HoooM.
           </motion.h1>
@@ -28,7 +28,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-slate-700 max-w-2xl"
+            className="text-lg text-gray-500 max-w-2xl"
           >
             We design and engineer digital products, brands, and enterprise
             systems that help teams scale with confidence.
@@ -41,13 +41,13 @@ export function Hero() {
           >
             <Link
               href="/contact"
-              className="rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
+              className="rounded-full bg-gray-500 text-white px-6 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
             >
               Book a Strategy Call
             </Link>
             <Link
               href="/work"
-              className="rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white"
+              className="rounded-full border border-slate-900 text-gray-600 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white"
             >
               View Work
             </Link>
@@ -74,7 +74,7 @@ export function Hero() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm text-slate-600">
+          <p className="mt-6 text-sm text-gray-500">
             Engineered for ambitious teams: software development, UX/UI design,
             branding, enterprise systems, and cloud operations.
           </p>

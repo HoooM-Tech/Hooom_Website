@@ -12,7 +12,9 @@ import { projects } from "../../data/work";
 import { blogPosts } from "../../data/blogPosts";
 
 export default function HomePage() {
-  const featuredProjects = projects.filter((project) => project.featured).slice(0, 4);
+  const featuredProjects = projects
+    .filter((project) => project.featured)
+    .slice(0, 4);
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
@@ -26,12 +28,21 @@ export default function HomePage() {
           description="A Lagos-built, globally-minded team of designers and engineers crafting software, brands, and systems for high-growth teams."
         />
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {["Product studios", "Enterprises", "Scale-ups", "Nonprofits"].map((item) => (
-            <div key={item} className="card-surface p-4 soft-shadow text-center">
-              <p className="text-sm uppercase tracking-[0.2em] text-brand-orange font-semibold">Partners</p>
-              <p className="mt-2 text-lg font-semibold text-slate-900">{item}</p>
-            </div>
-          ))}
+          {["Product studios", "Enterprises", "Scale-ups", "Nonprofits"].map(
+            (item) => (
+              <div
+                key={item}
+                className="card-surface p-4 soft-shadow text-center"
+              >
+                <p className="text-sm uppercase tracking-[0.2em] text-brand-orange font-semibold">
+                  Partners
+                </p>
+                <p className="mt-2 text-lg font-semibold text-gray-500">
+                  {item}
+                </p>
+              </div>
+            )
+          )}
         </div>
       </section>
 

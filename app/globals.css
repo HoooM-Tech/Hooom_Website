@@ -28,7 +28,11 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(15, 185, 177, 0.18), transparent 35%),
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(15, 185, 177, 0.18),
+      transparent 35%
+    ),
     radial-gradient(circle at 80% 0%, rgba(0, 209, 209, 0.2), transparent 30%),
     linear-gradient(120deg, rgba(15, 185, 177, 0.25), rgba(255, 122, 24, 0.14));
   opacity: 0.8;
@@ -58,10 +62,14 @@ a:hover {
   inset: -1px;
   border-radius: 1rem;
   padding: 1px;
-  background: linear-gradient(120deg, rgba(15,185,177,0.5), rgba(255,122,24,0.4));
+  background: linear-gradient(
+    120deg,
+    rgba(15, 185, 177, 0.5),
+    rgba(255, 122, 24, 0.4)
+  );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
 }
 
 .prose h1,
