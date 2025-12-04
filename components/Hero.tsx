@@ -28,7 +28,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-800 max-w-2xl"
+            className="text-lg text-gray-300 max-w-2xl"
           >
             We design and engineer digital products, brands, and enterprise
             systems that help teams scale with confidence.
