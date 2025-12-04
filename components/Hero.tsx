@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-16 bg-green-700">
+    <section className="relative overflow-hidden pb-20 pt-16 bg-blue-950">
       <div className="mesh-bg" aria-hidden />
       <div className="section-shell relative grid gap-10 lg:grid-cols-[1.2fr,0.8fr] items-center">
         <div className="space-y-6">
