@@ -47,7 +47,7 @@ export function Navigation() {
         <Link href="/" className="text-lg font-semibold text-slate-900">
           HoooM Technologies
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
           {navItems.map((item) => (
             <div key={item.href} className="relative group">
               <Link
@@ -76,7 +76,7 @@ export function Navigation() {
         </nav>
         <Link
           href="/contact"
-          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-cyan-400 text-gray-900 px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
+          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-cyan-400 text-gray-950 px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
         >
           Book a Strategy Call
         </Link>

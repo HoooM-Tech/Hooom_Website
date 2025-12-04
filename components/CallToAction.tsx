@@ -38,14 +38,14 @@ export function CallToAction({
         <div className="flex gap-3 flex-wrap">
           <Link
             href={primaryHref}
-            className="rounded-full bg-cyan-400 text-gray-900 px-5 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
+            className="rounded-full bg-cyan-400 text-gray-950 px-5 py-3 text-sm font-semibold shadow-glow hover:bg-slate-800"
           >
             {primaryLabel}
           </Link>
           {secondaryHref && (
             <Link
               href={secondaryHref}
-              className="rounded-full border border-slate-900 text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white"
+              className="rounded-full border border-slate-900 text-white bg-gray-900 px-5 py-3 text-sm font-semibold hover:bg-white hover:text-gray-950"
             >
               {secondaryLabel}
             </Link>
