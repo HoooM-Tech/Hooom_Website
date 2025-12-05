@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { LuX, LuMenu } from "react-icons/lu";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -24,8 +25,14 @@ const navItems = [
   { href: "/contact", label: "Contact" },
 ];
 
+const getLinkClasses = ({ isActive }: { isActive: boolean }) =>
+  `text-sm font-medium transition-colors hover:text-amber-500 ${
+    isActive ? "text-amber-500" : "text-slate-800 md:text-white"
+  }`;
+
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -47,12 +54,14 @@ export function Navigation() {
         <Link href="/" className="text-lg font-semibold text-slate-900">
           HoooM Technologies
         </Link>
+
+        {/* desktop view */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
           {navItems.map((item) => (
             <div key={item.href} className="relative group">
               <Link
                 href={item.href}
-                className="hover:text-brand-orange transition-colors"
+                className="text-gray-900 hover:text-brand-orange transition-colors"
               >
                 {item.label}
               </Link>
@@ -74,12 +83,50 @@ export function Navigation() {
             </div>
           ))}
         </nav>
+
+        {/* mobile hamburger view */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-slate-600 hover:text-slate-900 focus:outline-none"
+          >
+            {isOpen ? <LuX size={28} /> : <LuMenu size={28} />}
+          </button>
+        </div>
         <Link
           href="/contact"
-          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-cyan-400 text-gray-950 px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800"
+          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-cyan-400 text-gray-950 px-4 py-2 text-sm font-semibold shadow-glow hover:bg-slate-800 hover:text-white"
         >
           Book a Strategy Call
         </Link>
+      </div>
+
+      {/* mobile nav bar */}
+
+      <div
+        className={`md:hidden absolute w-full bg-white shadow-xl transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <div className="bg-white px-4 pt-2 pb-6 space-y-2 flex flex-col">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block px-3 py-3 rounded-md text-base font-medium text-gray-900"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="  mt-2 border-t border-slate-100">
+            <Link
+              href="/contact"
+              className="bg-blue-950 hover:bg-cyan-400 rounded-3xl text-white block text-center px-4 py-3 font-bold "
+            >
+              Book a call
+            </Link>
+          </div>
+        </div>
       </div>
     </motion.header>
   );
